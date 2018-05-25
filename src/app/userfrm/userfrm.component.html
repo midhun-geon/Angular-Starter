@@ -1,0 +1,33 @@
+<div class="container">
+  <h2>Add Employee</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Employee Id:</label>
+      <input type="text" class="form-control" id="id" placeholder="Employee Id" name="id" [(ngModel)]="userfrm.employeeid">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Designation:</label>
+      <input type="text" class="form-control" id="desg" placeholder="Designation" name="desg" [(ngModel)]="userfrm.designation">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Basic Salary:</label>
+        <input type="text" class="form-control" id="basal" placeholder="Basic Salary" name="basal" [(ngModel)]="userfrm.basicsalary">
+      </div>
+      <div class="form-group">
+          <label for="pwd">Team Lead:</label>
+          <input type="text" class="form-control" id="tele" placeholder="Team Lead" name="tele" [(ngModel)]="userfrm.leaddev">
+        </div>
+    
+    <button type="submit" class="btn btn-default" (click)="onSubmit()">Submit</button>
+  </form>
+  <div>
+    
+      <table >
+          <tr><th>ID</th><th>Designation</th><th>Basic Salary</th><th>Lead</th>
+          <tr *ngFor="let employee of th">
+          <td>{{employee.employeeid}}</td> <td>{{employee.designation}}</td> <td>{{employee.basicsalary}}</td> <td>{{employee.leaddev}}</td>
+          </tr>
+        </table>
+    
+  </div>
+</div>

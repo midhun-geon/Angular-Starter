@@ -1,0 +1,26 @@
+<div class="container-fluid" [hidden]="ifnamegiven">
+    <div id="tCreateTest1">
+       
+        <form class="form-inline">
+        <div class="form-group" style="float:left">
+      <label>Service Type:</label>
+      <select id="simTypeId" name="simTypeId" class="dropdowncss" #signupForm>
+        <option>MR</option>
+        <option>MRS</option>
+      </select>
+
+      <input type="text"  name="msisdn" class="form-control" #signupForm1>
+      <button type="submit" class="btn btn-search" (click)="onSubmit(signupForm,signupForm1)" >Search</button>
+        </div>
+        </form>
+      </div>
+      
+    
+  </div>
+  <div>
+  <div id="tCreateTest"> 
+      
+    <app-hello class="welcomepos" [data]="Fullname"></app-hello>
+    <app-userfrm></app-userfrm>
+  </div>
+</div>
